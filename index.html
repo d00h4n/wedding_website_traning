@@ -415,7 +415,8 @@
           class="row row-cols-lg-auto g-3 align-items-center justify-content-center"
           method="POST"
           action="https://script.google.com/macros/s/AKfycbz_7LQILrOS5DrEklG6O0H6UaOgdV-3n9wX_GqYAF5n8B9TwfslObkJYEFfWT0ZPQUQ/exec"
-          id="my-form">
+          id="my-form"
+        >
           <div class="col-12">
             <div class="mb-3">
               <label for="nama" class="form-label">Nama</label>
@@ -451,6 +452,22 @@
             <button class="btn btn-primary">Kirim</button>
           </div>
         </form>
+      </div>
+    </section>
+
+    <section id="gifts" class="gifts">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>ungkapan tanda kasih</span>
+            <h2>Kirim Hadiah</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim
+              animi beatae iure voluptate ut corporis.
+            
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -516,21 +533,20 @@
     </script>
 
     <script>
-      window.addEventListener("load", function() {
-  const form = document.getElementById('my-form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Konfirmasi kehadiran berhasil terkirim!");
-    })
-  });
-});
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          });
+        });
+      });
     </script>
   </body>
 </html>
